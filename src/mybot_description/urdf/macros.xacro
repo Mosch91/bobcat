@@ -11,6 +11,14 @@
                                            izz="0.05865" />
 </xacro:macro>
 
+<xacro:macro name="back_axel_inertial_params">
+  <origin xyz="0 0 -0.0225" rpy="0 0 0" />
+  <mass value="0.34055" />
+  <inertia ixx="0.00026046" ixy="0"          ixz="0"
+                            iyy="0.00026046" iyz="0"
+                                             izz="0.00041226" />
+</xacro:macro>
+
 <xacro:macro name="left_wheels_inertial_params">
   <origin xyz="0 0 -0.0225" rpy="0 0 0" />
   <mass value="0.34055" />

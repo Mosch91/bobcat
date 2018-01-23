@@ -32,6 +32,33 @@
     <child link="chassis_inertia" />
   </joint>
 
+
+  <!-- Add the rear axel with its joints and transmissions    -->
+
+  <link name="back_axel">
+    <inertial>
+      <xacro:left_wheels_inertial_params />
+    </inertial>
+    <collision name="collision">
+      <origin xyz="0.0 0 0.0" rpy="0 1.5707 1.5707"/>
+      <geometry>
+        <cylinder radius="0.007" length="0.25"/>
+      </geometry>
+    </collision>
+    <visual name="axel_visual">
+      <origin xyz="0.0 0.0 0.0" rpy="0 1.5707 1.5707"/>
+      <geometry>
+        <cylinder radius="0.007" length="0.25"/>
+      </geometry>
+    </visual>
+      </link>
+  <joint type="continuous" name="back_axel_joint">
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <child link="back_axel"/>
+    <parent link="chassis"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
+  </joint>
+
   <!-- Add the left rear wheel with its joints and tranmissions -->
 
   <link name="left_rear_wheel">
