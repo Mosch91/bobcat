@@ -42,13 +42,13 @@
     <collision name="collision">
       <origin xyz="0.0 0 0.0" rpy="0 1.5707 1.5707"/>
       <geometry>
-        <cylinder radius="0.007" length="0.25"/>
+        <cylinder radius="0.005" length="0.20"/>
       </geometry>
     </collision>
     <visual name="axel_visual">
       <origin xyz="0.0 0.0 0.0" rpy="0 1.5707 1.5707"/>
       <geometry>
-        <cylinder radius="0.007" length="0.25"/>
+        <cylinder radius="0.005" length="0.20"/>
       </geometry>
     </visual>
       </link>
@@ -57,6 +57,7 @@
     <child link="back_axel"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
+    <limit effort="10" velocity="100" />
   </joint>
 
   <!-- Add the left rear wheel with its joints and tranmissions -->
