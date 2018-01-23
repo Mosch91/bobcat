@@ -6,14 +6,13 @@
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="/mybot" args="joint_state_controller 
-				      back_axel_joint_position_controller
-				      axel_hinge_right_joint_position_controller
-				      axel_hinge_left_joint_position_controller"/>
+    output="screen" ns="/mybot" args="jleft_rear_wheel_velocity_controller right_rear_wheel_velocity_controller
+                                            left_front_wheel_velocity_controller right_front_wheel_velocity_controller
+                                            left_steering_hinge_position_controller right_steering_hinge_position_controller
+                                            joint_state_controlle"/>
 
   <!-- convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" 		respawn="false" output="screen">
-    <!--param name="robot_description" command="$(find xacro)/xacro.py '$(find mybot_description)/urdf/mybot.xacro'"/-->
     <remap from="/joint_states" to="/mybot/joint_states" />
   </node>
 
