@@ -8,12 +8,13 @@
   <mu2 value="0.0"/>
   <kp  value="10000000.0" />
   <kd  value="1.0" />
+  <dampingFactor>0.1</dampingFactor> <!-- introduce "friction" by slowing the vehicle with every time step by v(t+dt) = (1 - dampingFactor) * v(t)  not very elegant but it seems to work somewhat-->
   <material>Gazebo/Blue</material>
 </gazebo>
 
 <gazebo reference="left_rear_wheel">
-  <mu1 value="1.0"/>
-  <mu2 value="1.0"/>
+  <mu1 value="100.0"/>
+  <mu2 value="100.0"/>
   <kp  value="10000000.0" />
   <kd  value="1.0" />
   <fdir1 value="1 0 0"/>
@@ -21,8 +22,8 @@
 </gazebo>
 
 <gazebo reference="right_rear_wheel">
-  <mu1 value="1.0"/>
-  <mu2 value="1.0"/>
+  <mu1 value="100.0"/>
+  <mu2 value="100.0"/>
   <kp  value="10000000.0" />
   <kd  value="1.0" />
   <fdir1 value="1 0 0"/>
@@ -30,8 +31,8 @@
 </gazebo>
 
 <gazebo reference="left_front_wheel">
-  <mu1 value="1.0"/>
-  <mu2 value="1.0"/>
+  <mu1 value="100.0"/>
+  <mu2 value="100.0"/>
   <kp  value="10000000.0" />
   <kd  value="1.0" />
   <fdir1 value="0 0 1"/>
@@ -39,8 +40,8 @@
 </gazebo>
 
 <gazebo reference="right_front_wheel">
-  <mu1 value="1.0"/>
-  <mu2 value="1.0"/>
+  <mu1 value="100.0"/>
+  <mu2 value="100.0"/>
   <kp  value="10000000.0" />
   <kd  value="1.0" />
   <fdir1 value="0 0 1"/>
